@@ -1,6 +1,5 @@
 # 单点登录
 - [x] 需求分析
-
 ---
 
 | Left-aligned | Center-aligned | Right-aligned |
@@ -18,10 +17,12 @@ public class Chapter18Application {
 		SpringApplication.run(Chapter18Application.class, args);
 	}
 }
+```diff
++ haode 
 ```
 
 + zenjia 
+
 ----
 
-```
-+ haode 
+

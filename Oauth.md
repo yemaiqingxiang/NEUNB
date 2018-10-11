@@ -25,7 +25,7 @@ public class Chapter18Application {
 
 
 
-```
+```  
 gantt
     title A Gantt Diagram
 

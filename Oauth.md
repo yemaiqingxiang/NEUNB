@@ -1,8 +1,9 @@
 # 单点登录
 - [x] 需求分析
-|这个表格超好用|你信不信|
-|------|
-|第二号|好的|
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
 ***
 `正常写 + in学家 - 井`
 ```java

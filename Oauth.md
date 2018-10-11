@@ -1,19 +1,16 @@
 #### 甘特图  
 
-sequenceDiagram
-    participant z as 张三
-    participant l as 李四
-    loop 日复一日
-        z->>l: 吃了吗您呐？
-        l-->>z: 吃了，您呢？
-        activate z
-        Note left of z: 想了一下
-        alt 还没吃
-            z-xl: 还没呢，正准备回去吃
-        else 已经吃了
-            z-xl: 我也吃过了，哈哈
-        end
-        opt 大过年的
-            l-->z: 祝您新年好啊
-        end
-    end
+st=>start: Start:>http://www.google.com[blank]
+e=>end:>http://www.google.com
+op1=>operation: My Operation
+sub1=>subroutine: My Subroutine
+cond=>condition: Yes
+or No?:>http://www.google.com
+io=>inputoutput: catch something...
+para=>parallel: parallel tasks
+
+st->op1->cond
+cond(yes)->io->e
+cond(no)->para
+para(path1, bottom)->sub1(right)->op1
+para(path2, top)->op1

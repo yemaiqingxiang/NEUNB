@@ -23,5 +23,5 @@ public class Chapter18Application {
 + zenjia 
 ----
 
-```diff
+```
 + haode 

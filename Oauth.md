@@ -2,5 +2,14 @@
 - [x] 需求分析
 ***
 `正常写 + in学家 - 井`
-+zenjia
+```java
+public class Chapter18Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Chapter18Application.class, args);
+	}
+}
+```
+
++ zenjia
 ----

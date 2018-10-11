@@ -1,6 +1,6 @@
 #### 甘特图  
-```
-gitGraph:
+
+```gitGraph:
 options
 {
     "nodeSpacing": 150,

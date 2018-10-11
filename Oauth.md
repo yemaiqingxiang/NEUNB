@@ -8,7 +8,7 @@
 | git status   | git status     | git status    |
 | git diff     | git diff       | git diff      |
 
----
+***
 > yin
 `正常写 + in学家 - 井`
 ```java
@@ -20,5 +20,4 @@ public class Chapter18Application {
 }
 ```
 
-+ zenjia
-----
++ zenjia ----

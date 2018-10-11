@@ -1,16 +1,3 @@
-#### 甘特图  
-
-st=>start: Start:>http://www.google.com[blank]
-e=>end:>http://www.google.com
-op1=>operation: My Operation
-sub1=>subroutine: My Subroutine
-cond=>condition: Yes
-or No?:>http://www.google.com
-io=>inputoutput: catch something...
-para=>parallel: parallel tasks
-
-st->op1->cond
-cond(yes)->io->e
-cond(no)->para
-para(path1, bottom)->sub1(right)->op1
-para(path2, top)->op1
+#### 写点什么好呢？
+写点日记吧  > 今天突然向同一个问题就是
+其实人并没有那么重的好奇心 ，之前我们想的小孩子会看见什么要什么

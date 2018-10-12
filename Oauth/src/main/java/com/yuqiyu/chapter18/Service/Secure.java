@@ -11,6 +11,7 @@ public class Secure {
     public String s(){
         return "service";
     }
+
     @PreAuthorize("hasRole('ADMIN')")
     public String yes(){
         return "service-yes";

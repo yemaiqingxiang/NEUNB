@@ -3,6 +3,7 @@ package com.yuqiyu.chapter18.controller;
 import com.yuqiyu.chapter18.Service.Secure;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -13,7 +14,11 @@ public class SecureController {
     @Autowired
     Secure secure;
 
-    @RequestMapping(method = RequestMethod.GET)
+    /**
+     * 这个标签可以加载很多地方，controller，service都可以
+     */
+    @PreAuthorize("hasRole('ADMIN') AND hasRole('DBA')")
+    @RequestMapping(method = RequestMethod.GET,value = "/")
     public String sayHello() {
         return "Secure Hello!";
     }

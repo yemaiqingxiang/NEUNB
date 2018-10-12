@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "6a52f5e4-140a-45ee-a18b-427e40fe237c",
+		"name": "Oauth",
+		"description": "权限验证",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "获取token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "yuqiyu_secret",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "yuqiyu_home_pc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:8080/oauth/token?username=admin&password=admin&grant_type=password",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "admin"
+						},
+						{
+							"key": "password",
+							"value": "admin"
+						},
+						{
+							"key": "grant_type",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "访问网页",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "8555105f-134c-484b-bdd2-18176da4a0d4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"s\":\"测试结果成功\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/secure/on",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"secure",
+						"on"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "退出",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "dd7980f6-f424-4898-9b0d-b6b5d7bb686a",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:8080/oauth/logout",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get访问",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/secure?access_token=fe5d97ac-e023-4180-bed9-8edf8e61c5bc",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"secure"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "fe5d97ac-e023-4180-bed9-8edf8e61c5bc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

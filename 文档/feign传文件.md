@@ -34,7 +34,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
-
+//UploadService.就是类名
 @FeignClient(value = "eureka-feign-upload-server", configuration = UploadService.MultipartSupportConfig.class)
 public interface UploadService {
 

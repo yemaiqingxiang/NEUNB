@@ -1,8 +1,8 @@
 
 ## feign上传文件  
-### 服务提供方（接收文件）
+#### 服务提供方（接收文件）
 服务提供方的实现比较简单，就按Spring MVC的正常实现方式即可
-服务消费方（发送文件）
+#### 服务消费方（发送文件）
 在服务消费方由于会使用Feign客户端，所以在这里需要在引入feign对表单提交的依赖，具体如下：
 ```xml 
 <dependency>
@@ -21,6 +21,7 @@
    <version>1.3.3</version>
 </dependency>
 ```
+> 定义文件上传方的应用主类和FeignClient，假设服务提供方的服务名为eureka-feign-upload-server
 ```java
 package com.didispace.api.consumer;
 

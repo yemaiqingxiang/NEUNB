@@ -12,7 +12,7 @@ public class Secure {
         return "service";
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('ADMIN')")
     public String yes(){
         return "service-yes";
     }

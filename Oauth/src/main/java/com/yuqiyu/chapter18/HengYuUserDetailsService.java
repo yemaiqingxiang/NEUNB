@@ -1,5 +1,6 @@
 package com.yuqiyu.chapter18;
 
+
 import com.yuqiyu.chapter18.entity.Authority;
 import com.yuqiyu.chapter18.entity.User;
 import com.yuqiyu.chapter18.jpa.UserJPA;
@@ -13,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Collection;
+
 
 /**
  * 登录用户方法
@@ -36,12 +38,14 @@ public class HengYuUserDetailsService implements UserDetailsService
         }
         //获取用户的所有权限并且SpringSecurity需要的集合
         Collection<GrantedAuthority> grantedAuthorities = new ArrayList<>();
+        //在这个里给用户加了一个权限
         GrantedAuthority g = new SimpleGrantedAuthority("ADMIN");
          grantedAuthorities.add(g);
         for (Authority authority : userFromDatabase.getAuthorities()) {
             GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(authority.getName());
             grantedAuthorities.add(grantedAuthority);
         }
+
         //返回一个SpringSecurity需要的用户对象
         return new org.springframework.security.core.userdetails.User(
                 userFromDatabase.getUsername(),

@@ -30,3 +30,10 @@ spring:
       hibernate:
         show_sql: true
         format_sql: true
+  redis:
+    port: 6379
+    host: localhost
+    password:
+    timeout: 2000
+
+

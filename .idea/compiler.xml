@@ -7,10 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="chapter18" />
+        <module name="hmily-tcc-demo-springcloud-account" />
+        <module name="hmily-tcc-demo-springcloud-eureka" />
+        <module name="hmily-tcc-demo-springcloud-inventory" />
+        <module name="hmily-tcc-demo-springcloud-order" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="chapter18" target="1.8" />
+      <module name="demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
